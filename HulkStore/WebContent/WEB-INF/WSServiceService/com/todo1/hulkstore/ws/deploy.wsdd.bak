@@ -1,0 +1,28 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from WSServiceService WSDL service -->
+
+  <service name="WSService" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://ws.hulkstore.todo1.com"/>
+      <parameter name="wsdlServiceElement" value="WSServiceService"/>
+      <parameter name="schemaQualified" value="http://ws.hulkstore.todo1.com"/>
+      <parameter name="wsdlServicePort" value="WSService"/>
+      <parameter name="className" value="com.todo1.hulkstore.ws.WSServiceSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="WSService"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="ingresarProducto" qname="operNS:ingresarProducto" xmlns:operNS="http://ws.hulkstore.todo1.com" soapAction="" >
+      </operation>
+      <parameter name="allowedMethods" value="ingresarProducto"/>
+
+  </service>
+</deployment>
