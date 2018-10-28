@@ -1,0 +1,47 @@
+<table align="center" style="background-color: aliceblue">
+  <tr>
+    <td colspan="2">
+      <h2>{{titlep}}</h2>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      CODIGO PRODUCTO:
+    </td>
+    <td>
+      <input type="text" [(ngModel)]="codigoproducto">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      PRODUCTO:
+    </td>
+    <td>
+      <input type="text" [(ngModel)]="producto">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      MARCA:
+    </td>
+    <td>
+      <input type="text" [(ngModel)]="marca">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      TIPO:
+    </td>
+    <td>
+      <input type="text" [(ngModel)]="tipo">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <button type="button" [routerLink]="['/principal']">CANCELAR</button>
+    </td>
+    <td>
+      <button type="button" (click)="guardarProducto()">GUARDAR</button>
+    </td>
+  </tr>
+</table>

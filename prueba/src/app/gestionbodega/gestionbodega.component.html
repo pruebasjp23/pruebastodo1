@@ -1,0 +1,23 @@
+<table align="center" style="background-color: aliceblue">
+  <tr>
+    <td colspan="2">
+      <h2>{{titleb}}</h2>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      NOMBRE BODEGA:
+    </td>
+    <td>
+      <input [(ngModel)]="bodega" />
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <button type="button" [routerLink]="['/principal']">CANCELAR</button>
+    </td>
+    <td>
+      <button type="button" (click)="guardarBodega()">GUARDAR</button>
+    </td>
+  </tr>
+</table>
